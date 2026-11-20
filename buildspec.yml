@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building application"
+      - test -f index.html
+      - test -f appspec.yml
+      - test -f scripts/start.sh
+      - echo "Build and validation successful"
+
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/start.sh
